@@ -1,0 +1,4 @@
+name: XRAY_LIDC
+root_dir: "/teamspace/studios/this_studio/LIDC_dataset_final/" 
+image_channels: 1
+augmentation: True

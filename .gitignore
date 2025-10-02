@@ -1,0 +1,23 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local environments and tooling
+.venv/
+venv/
+.env
+.DS_Store
+
+# Training and inference artifacts
+outputs/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
+*.nii
+*.nii.gz
+
+# Locally cloned dependency
+preprocess/DiffDRR/
