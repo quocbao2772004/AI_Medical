@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A Deep Learning-based Web Application for CT Reconstruction from X-ray Image" />
+    <title>A Deep Learning-based Web Application for CT Reconstruction from X-ray Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Top Pill Badge -->
+      <div class="header-badge-wrap">
+        <span class="conf-badge">ICTA 2025 · Research Paper</span>
+      </div>
+
+      <!-- Hero Header Section -->
+      <header class="paper-header">
+        <h1 class="paper-title">
+          A Deep Learning-based Web Application for CT Reconstruction from X-ray Image
+        </h1>
+
+        <!-- Authors -->
+        <div class="authors-list">
+          <span class="author-name">Huu Quang Hoa Nguyen<sup>1,†</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Tran Quoc Bao Le<sup>1,†</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Quy Dat Tran<sup>1,†</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Thi Tan Tien Nguyen<sup>2,3,*</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Hang Phuong Nguyen<sup>4</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Cong Tran<sup>1</sup></span>
+          <span class="sep">·</span>
+          <span class="author-name">Cuong Pham<sup>1</sup></span>
+        </div>
+
+        <!-- Affiliations -->
+        <div class="affiliations-list">
+          <p><sup>1</sup> Posts and Telecommunications Institute of Technology, Hanoi, Vietnam</p>
+          <p><sup>2</sup> Thai Nguyen University of Information and Communication Technology, Thai Nguyen, Vietnam</p>
+          <p><sup>3</sup> Thai Nguyen University of Medicine and Pharmacy, Thai Nguyen, Vietnam</p>
+          <p><sup>4</sup> School of Mechanical Engineering, University of Ulsan, Ulsan, Republic of Korea</p>
+          <p class="author-notes">
+            <span><sup>*</sup> Corresponding author</span>
+            <span><sup>†</sup> Equal contribution</span>
+          </p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <a class="btn btn-dark" href="ICTA_2025_295.pdf" target="_blank" rel="noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Paper</span>
+          </a>
+
+          <a class="btn btn-light" href="https://github.com/QuyDatSadBoy/AI-Medical-X-ray2CT-Project" target="_blank" rel="noreferrer">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+            </svg>
+            <span>Code</span>
+          </a>
+
+          <a class="btn btn-light" href="#demo">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Interactive Demo</span>
+          </a>
+
+          <a class="btn btn-light" href="#citation">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+              <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+            </svg>
+            <span>BibTeX</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Abstract Section -->
+      <section class="section" id="abstract">
+        <div class="section-header-line">
+          <h2 class="section-title">Abstract</h2>
+        </div>
+        <div class="abstract-box">
+          <p>
+            This study proposes a web application to address the challenge of accessibility to Computed Tomography (CT) equipment by reconstructing 3D spatial information from a 2D X-ray image. Our proposed method is a multi-stage deep learning pipeline including generating synthetic data from DiffDRR, reducing the domain gap between synthetic and real images by CycleGAN, and reconstructing the CT image from X-ray2CTPA architecture.
+          </p>
+          <p>
+            The results present that the proposed framework not only reconstructs 3D volumes with consistent anatomical structures but also allows users to interact with rotation and viewing slices (coronal, sagittal, axial) via the web interface. This study hopes to contribute to the collective effort of applying AI to enhance the informational value of common diagnostic imaging modalities, thereby opening up the potential for improved healthcare accessibility for the community.
+          </p>
+        </div>
+      </section>
+
+      <!-- Method Overview Section -->
+      <section class="section" id="method">
+        <div class="section-header-line">
+          <h2 class="section-title">Method Overview</h2>
+        </div>
+        <p>
+          We propose an end-to-end framework that reconstructs high-fidelity 3D CT volumes from a single 2D chest radiograph. The workflow is organized into three complementary stages: (1) <strong>DiffDRR Synthesis</strong> generates diverse synthetic digitally reconstructed radiographs from open CT volumes via differentiable ray-tracing; (2) <strong>CycleGAN Adaptation</strong> reduces the domain shift between synthetic renderings and clinical radiographs; and (3) <strong>X-ray2CTPA Diffusion</strong> synthesizes the final 3D volumetric CT representations via conditioned 3D latent denoising.
+        </p>
+
+        <!-- Figure 1: Overall Pipeline -->
+        <figure class="paper-figure">
+          <img src="../assets/pipeline.png" alt="Overview of the proposed X-ray2CT reconstruction pipeline" />
+          <figcaption class="paper-caption">
+            <strong>Figure 1:</strong> Overview of the proposed X-ray2CT framework. The end-to-end workflow connects differentiable DRR rendering (DiffDRR), synthetic-to-real domain adaptation (CycleGAN), and conditional 3D diffusion reconstruction (X-ray2CTPA) to generate interactive 3D CT volumes from a single 2D radiograph.
+          </figcaption>
+        </figure>
+
+        <!-- Figure 2: Detailed Model Architecture -->
+        <figure class="paper-figure">
+          <img src="../assets/model.png" alt="3D Latent Denoising Diffusion Network Architecture" />
+          <figcaption class="paper-caption">
+            <strong>Figure 2:</strong> Architecture of the conditional 3D diffusion reconstruction network (X-ray2CTPA), incorporating a 3D Variational Autoencoder (VAE) and a cross-attention conditional denoising U-Net guided by 2D radiograph priors.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Interactive 3D CT Demo Section -->
+      <section class="section" id="demo">
+        <div class="section-header-line">
+          <h2 class="section-title">Interactive Demonstration</h2>
+        </div>
+        <p>
+          Explore reconstructed 3D CT volumes and ground truth references generated from 2D chest X-ray inputs across both CTPA and LIDC-IDRI datasets.
+        </p>
+
+        <!-- Block 1: CTPA Dataset -->
+        <div class="viewer-card" id="cardCtpa">
+          <div class="viewer-header">
+            <div class="viewer-meta">
+              <span class="dataset-badge badge-ctpa">CTPA Dataset</span>
+              <span class="viewer-pill">CASE <b id="caseNumberCtpa">01</b></span>
+              <span class="viewer-desc" id="caseDescriptionCtpa">A contrast-enhanced pulmonary angiography example.</span>
+            </div>
+            <div class="viewer-nav">
+              <button class="viewer-btn" id="prevCaseCtpa" aria-label="Previous CTPA Case" title="Previous CTPA Case">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="case-dots" id="dotsCtpa" aria-label="CTPA Case selector">
+                <button class="dot-btn active" data-dataset="ctpa" data-case="0" aria-label="CTPA Case 1"></button>
+                <button class="dot-btn" data-dataset="ctpa" data-case="1" aria-label="CTPA Case 2"></button>
+                <button class="dot-btn" data-dataset="ctpa" data-case="2" aria-label="CTPA Case 3"></button>
+              </div>
+              <button class="viewer-btn" id="nextCaseCtpa" aria-label="Next CTPA Case" title="Next CTPA Case">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="viewer-grid">
+            <!-- 2D Input -->
+            <div class="viewer-col">
+              <div class="col-label">
+                <span>2D X-Ray Input</span>
+                <span class="status-indicator input-dot"></span>
+              </div>
+              <div class="media-box xray-box">
+                <img id="xrayImageCtpa" src="../assets/4015007782447_xray.png" alt="2D Chest X-Ray Input - CTPA" />
+              </div>
+              <span class="col-caption">Single projection radiograph</span>
+            </div>
+
+            <!-- Reconstructed Output -->
+            <div class="viewer-col col-featured">
+              <div class="col-label">
+                <span>Reconstructed 3D CT</span>
+                <span class="status-indicator active-dot">GENERATED</span>
+              </div>
+              <div class="media-box ct-box">
+                <img id="ctImageCtpa" src="../assets/4015007782447.gif" alt="Synthesized 3D CT Volume - CTPA" />
+              </div>
+              <span class="col-caption">Model synthesized volume</span>
+            </div>
+
+            <!-- Ground Truth Reference -->
+            <div class="viewer-col">
+              <div class="col-label">
+                <span>Ground Truth CT</span>
+                <span class="status-indicator ref-dot">REFERENCE</span>
+              </div>
+              <div class="media-box ct-box ref-box">
+                <img id="referenceImageCtpa" src="../assets/4015007782447_0.gif" alt="Ground Truth CT Reference - CTPA" />
+              </div>
+              <span class="col-caption">Target clinical acquisition</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Block 2: LIDC-IDRI Dataset -->
+        <div class="viewer-card" id="cardLidc">
+          <div class="viewer-header">
+            <div class="viewer-meta">
+              <span class="dataset-badge badge-lidc">LIDC-IDRI Dataset</span>
+              <span class="viewer-pill">CASE <b id="caseNumberLidc">01</b></span>
+              <span class="viewer-desc" id="caseDescriptionLidc">A lung CT case from the benchmark LIDC-IDRI dataset.</span>
+            </div>
+            <div class="viewer-nav">
+              <button class="viewer-btn" id="prevCaseLidc" aria-label="Previous LIDC Case" title="Previous LIDC Case">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="case-dots" id="dotsLidc" aria-label="LIDC Case selector">
+                <button class="dot-btn active" data-dataset="lidc" data-case="0" aria-label="LIDC Case 1"></button>
+                <button class="dot-btn" data-dataset="lidc" data-case="1" aria-label="LIDC Case 2"></button>
+                <button class="dot-btn" data-dataset="lidc" data-case="2" aria-label="LIDC Case 3"></button>
+              </div>
+              <button class="viewer-btn" id="nextCaseLidc" aria-label="Next LIDC Case" title="Next LIDC Case">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="viewer-grid">
+            <!-- 2D Input -->
+            <div class="viewer-col">
+              <div class="col-label">
+                <span>2D X-Ray Input</span>
+                <span class="status-indicator input-dot"></span>
+              </div>
+              <div class="media-box xray-box">
+                <img id="xrayImageLidc" src="../assets/x-ray input.jpg" alt="2D Chest X-Ray Input - LIDC" />
+              </div>
+              <span class="col-caption">Single projection radiograph</span>
+            </div>
+
+            <!-- Reconstructed Output -->
+            <div class="viewer-col col-featured">
+              <div class="col-label">
+                <span>Reconstructed 3D CT</span>
+                <span class="status-indicator active-dot">GENERATED</span>
+              </div>
+              <div class="media-box ct-box">
+                <img id="ctImageLidc" src="../assets/LIDC-IDRI-0046.gif" alt="Synthesized 3D CT Volume - LIDC" />
+              </div>
+              <span class="col-caption">Model synthesized volume</span>
+            </div>
+
+            <!-- Ground Truth Reference -->
+            <div class="viewer-col">
+              <div class="col-label">
+                <span>Ground Truth CT</span>
+                <span class="status-indicator ref-dot">REFERENCE</span>
+              </div>
+              <div class="media-box ct-box ref-box">
+                <img id="referenceImageLidc" src="../assets/LIDC-IDRI-0046_0.gif" alt="Ground Truth CT Reference - LIDC" />
+              </div>
+              <span class="col-caption">Target clinical acquisition</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Figure 3: Web Interface Viewer Preview -->
+        <figure class="paper-figure">
+          <img src="../assets/web_interface.png" alt="Clinical web application interface for interactive 3D slice exploration" />
+          <figcaption class="paper-caption">
+            <strong>Figure 3:</strong> Browser-based medical imaging viewer supporting multi-planar reformatting (axial, coronal, sagittal), continuous volume rotation, and slice index navigation.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Experimental Results Section -->
+      <section class="section" id="results">
+        <div class="section-header-line">
+          <h2 class="section-title">Experimental Results</h2>
+        </div>
+        <p>
+          We evaluate our framework on held-out test splits from both contrast-enhanced CTPA and low-dose LIDC-IDRI datasets. Quantitative evaluations demonstrate consistent structural fidelity with a mean <strong>SSIM of 0.7017</strong> and <strong>PSNR of 24.79 dB</strong>.
+        </p>
+
+        <!-- Figure 4: Qualitative Comparison -->
+        <figure class="paper-figure">
+          <img src="../assets/last_compare.png" alt="Qualitative visual comparison between generated 3D CT and ground truth" />
+          <figcaption class="paper-caption">
+            <strong>Figure 4:</strong> Qualitative visual comparison between reconstructed 3D volumes and target ground truth clinical CT scans across multiple orthogonal views.
+          </figcaption>
+        </figure>
+
+        <!-- Table 1: Benchmark Metrics -->
+        <figure class="paper-figure table-figure">
+          <img src="../assets/Metric_dat.png" alt="Quantitative evaluation metrics table" class="paper-table-img" />
+          <figcaption class="paper-caption">
+            <strong>Table 1:</strong> Quantitative evaluation on held-out test sets across CTPA and LIDC-IDRI datasets measuring Structural Similarity (SSIM) and Peak Signal-to-Noise Ratio (PSNR).
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Citation Section -->
+      <section class="section" id="citation">
+        <h2 class="section-title">Citation</h2>
+        <p class="section-subtitle">If you find this work or demo useful in your research, please cite:</p>
+        <div class="citation-box">
+          <button class="copy-citation-btn" id="copyCitationBtn" aria-label="Copy BibTeX citation">
+            <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span id="copyBtnText">Copy BibTeX</span>
+          </button>
+          <pre id="bibtexText"><code>@inproceedings{xray2ct2025,
+  title     = {A Deep Learning-based Web Application for CT Reconstruction from X-ray Image},
+  author    = {Nguyen, Huu Quang Hoa and Le, Tran Quoc Bao and Tran, Quy Dat and Nguyen, Thi Tan Tien and Nguyen, Hang Phuong and Tran, Cong and Pham, Cuong},
+  booktitle = {Proceedings of the International Conference on Advanced Technologies (ICTA)},
+  year      = {2025}
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="paper-footer">
+        <div class="footer-content">
+          <p class="footer-title">AI-Medical X-ray2CT Reconstruction Project</p>
+          <p class="footer-sub">Posts and Telecommunications Institute of Technology (PTIT) · ICTA 2025</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">BibTeX citation copied to clipboard!</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

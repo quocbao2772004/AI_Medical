@@ -1,0 +1,692 @@
+/* ==========================================================================
+   Modern Academic Project Page Stylesheet
+   Inspired by MixiSpeech / Nerfies / Academic Paper Landing Pages
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --bg-page: #ffffff;
+  --bg-card: #f8fafc;
+  --bg-subtle: #f1f5f9;
+  
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --text-subtle: #6b7280;
+  --text-faint: #9ca3af;
+  
+  --border-light: #e5e7eb;
+  --border-card: #e2e8f0;
+  
+  --btn-dark-bg: #262e35;
+  --btn-dark-hover: #1b2126;
+  --btn-light-bg: #f3f4f6;
+  --btn-light-hover: #e5e7eb;
+  
+  --accent-green: #10b981;
+  --accent-blue: #2563eb;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+/* Page Wrapper - Centered Single Column */
+.page-wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+/* --------------------------------------------------------------------------
+   Top Pill Badge
+   -------------------------------------------------------------------------- */
+.header-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.conf-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 9999px;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Header: Title, Authors, Affiliations, Action Buttons
+   -------------------------------------------------------------------------- */
+.paper-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.paper-title {
+  font-size: clamp(30px, 4.4vw, 42px);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+  max-width: 860px;
+  margin: 0 auto 20px;
+}
+
+.authors-list {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.author-name {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.authors-list sup {
+  font-size: 0.72em;
+  font-weight: 600;
+  color: var(--text-subtle);
+  margin-left: 1px;
+}
+
+.authors-list .sep {
+  color: var(--text-faint);
+  margin: 0 5px;
+  font-weight: 400;
+}
+
+.affiliations-list {
+  font-size: 12.5px;
+  color: var(--text-subtle);
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.affiliations-list p {
+  margin: 2px 0;
+}
+
+.author-notes {
+  margin-top: 8px !important;
+  font-size: 11.5px;
+  color: var(--text-faint);
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Action Buttons (Pill Buttons) */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 28px 0 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.16s ease-in-out;
+}
+
+.btn-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.btn-dark {
+  background: var(--btn-dark-bg);
+  color: #ffffff;
+  border: 1px solid var(--btn-dark-bg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-dark:hover {
+  background: var(--btn-dark-hover);
+  border-color: var(--btn-dark-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.btn-light {
+  background: var(--btn-light-bg);
+  color: #374151;
+  border: 1px solid var(--border-light);
+}
+
+.btn-light:hover {
+  background: var(--btn-light-hover);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   Sections General Styling
+   -------------------------------------------------------------------------- */
+.section {
+  margin-bottom: 56px;
+}
+
+.section-header-line {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  margin-bottom: 22px;
+}
+
+.section-header-line .section-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #1e293b;
+  margin: 0;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-main);
+  margin: 0 0 12px;
+  text-align: left;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+/* --------------------------------------------------------------------------
+   Abstract Box (Matching Academic Style with Accent Bar)
+   -------------------------------------------------------------------------- */
+.abstract-box {
+  background: #f5f7f9;
+  border: 1px solid #e9edf2;
+  border-left: 4.5px solid #566c80;
+  border-radius: 9px;
+  padding: 24px 28px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.abstract-box p {
+  font-size: 14.5px;
+  line-height: 1.72;
+  color: #334155;
+  margin: 0 0 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.abstract-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Academic Figures & Captions (Inspired by SwiftAudio / A* Paper Project Pages)
+   -------------------------------------------------------------------------- */
+.paper-figure {
+  margin: 32px auto 40px;
+  text-align: center;
+  max-width: 100%;
+}
+
+.paper-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.paper-figure.table-figure img {
+  max-width: 760px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  border: 1px solid #edf2f7;
+}
+
+.paper-caption {
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: #555555;
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 900px;
+  margin: 12px auto 0;
+  padding: 0 4px;
+}
+
+.paper-caption strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Demo Section (Stacked Layout with Clean White Cards)
+   -------------------------------------------------------------------------- */
+.viewer-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 24px;
+  color: var(--text-main);
+  margin-bottom: 32px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf2f7;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.viewer-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dataset-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-ctpa {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-lidc {
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.viewer-pill {
+  background: #f8fafc;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-card);
+}
+
+.viewer-desc {
+  font-size: 13px;
+  color: var(--text-subtle);
+}
+
+.viewer-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.viewer-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.viewer-btn:hover {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: #94a3b8;
+  transform: scale(1.04);
+}
+
+.case-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot-btn {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: #cbd5e1;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.dot-btn.active {
+  width: 18px;
+  border-radius: 4px;
+  background: #2563eb;
+}
+
+/* Viewer Grid */
+.viewer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.viewer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.status-indicator {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.input-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
+
+.active-dot {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.ref-dot {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* Media Box with Pure White Background for Animated GIFs */
+.media-box {
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+  display: block;
+}
+
+.xray-box {
+  background: #ffffff;
+}
+
+.xray-box img {
+  object-fit: contain;
+}
+
+.ref-box {
+  background: #ffffff;
+}
+
+.col-caption {
+  display: block;
+  font-size: 11.5px;
+  color: #64748b;
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Citation Section: BibTeX Box
+   -------------------------------------------------------------------------- */
+.citation-box {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.citation-box pre {
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.copy-citation-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.copy-citation-btn:hover {
+  background: #f8fafc;
+  color: var(--text-main);
+  border-color: #94a3b8;
+}
+
+.copy-citation-btn.copied {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+  color: #047857;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.paper-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 36px;
+  margin-top: 56px;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 4px;
+}
+
+.footer-sub {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Toast Notification
+   -------------------------------------------------------------------------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1e293b;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  z-index: 999;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout
+   -------------------------------------------------------------------------- */
+@media (max-width: 820px) {
+  .page-wrapper {
+    padding: 40px 18px 56px;
+  }
+  
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .viewer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .media-box {
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .paper-title {
+    font-size: 26px;
+  }
+
+  .authors-list {
+    font-size: 13.5px;
+  }
+
+  .action-buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 7px 14px;
+    font-size: 12.5px;
+  }
+
+  .abstract-box {
+    padding: 18px;
+  }
+
+  .abstract-box p {
+    text-align: left;
+  }
+
+  .viewer-card {
+    padding: 16px;
+  }
+
+  .viewer-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .viewer-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .copy-citation-btn {
+    position: static;
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+}
