@@ -2,41 +2,41 @@
 const cases = {
   ctpa: [
     {
-      xray: '../assets/4015007782447_xray.png',
-      output: '../assets/4015007782447.gif',
-      reference: '../assets/4015007782447_0.gif',
+      xray: 'assets/4015007782447_xray.png',
+      output: 'assets/4015007782447.gif',
+      reference: 'assets/4015007782447_0.gif',
       description: 'A contrast-enhanced pulmonary angiography example.'
     },
     {
-      xray: '../assets/4015008525303_xray.png',
-      output: '../assets/4015008525303.gif',
-      reference: '../assets/4015008525303_0.gif',
+      xray: 'assets/4015008525303_xray.png',
+      output: 'assets/4015008525303.gif',
+      reference: 'assets/4015008525303_0.gif',
       description: 'A second CTPA case with an anatomically rich vascular volume.'
     },
     {
-      xray: '../assets/4015009934504_xray.png',
-      output: '../assets/4015009934504.gif',
-      reference: '../assets/4015009934504_0.gif',
+      xray: 'assets/4015009934504_xray.png',
+      output: 'assets/4015009934504.gif',
+      reference: 'assets/4015009934504_0.gif',
       description: 'A representative sample from the held-out validation set.'
     }
   ],
   lidc: [
     {
-      xray: '../assets/x-ray input.jpg',
-      output: '../assets/LIDC-IDRI-0046.gif',
-      reference: '../assets/LIDC-IDRI-0046_0.gif',
+      xray: 'assets/x-ray input.jpg',
+      output: 'assets/LIDC-IDRI-0046.gif',
+      reference: 'assets/LIDC-IDRI-0046_0.gif',
       description: 'A lung CT case from the benchmark LIDC-IDRI dataset.'
     },
     {
-      xray: '../assets/x-ray.jpg',
-      output: '../assets/4015007720739.gif',
-      reference: '../assets/4015007720739_0.gif',
+      xray: 'assets/x-ray.jpg',
+      output: 'assets/4015007720739.gif',
+      reference: 'assets/4015007720739_0.gif',
       description: 'A second low-dose lung screening reconstruction example.'
     },
     {
-      xray: '../assets/4015007782447_xray.png',
-      output: '../assets/4015007782447.gif',
-      reference: '../assets/4015007782447_0.gif',
+      xray: 'assets/4015007782447_xray.png',
+      output: 'assets/4015007782447.gif',
+      reference: 'assets/4015007782447_0.gif',
       description: 'A cross-dataset comparison showing fine parenchymal detail.'
     }
   ]
@@ -61,7 +61,7 @@ function setupDatasetViewer(datasetKey, elements) {
     setTimeout(() => {
       if (elements.xray) {
         elements.xray.onerror = function() {
-          this.src = datasetKey === 'ctpa' ? '../assets/xray_ctpa.png' : '../assets/xray_lidc.png';
+          this.src = datasetKey === 'ctpa' ? 'assets/xray_ctpa.png' : 'assets/xray_lidc.png';
         };
         elements.xray.src = item.xray;
       }

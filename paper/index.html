@@ -115,7 +115,7 @@
 
         <!-- Figure 1: Overall Pipeline -->
         <figure class="paper-figure">
-          <img src="../assets/pipeline.png" alt="Overview of the proposed X-ray2CT reconstruction pipeline" />
+          <img src="assets/pipeline.png" alt="Overview of the proposed X-ray2CT reconstruction pipeline" />
           <figcaption class="paper-caption">
             <strong>Figure 1:</strong> Overview of the proposed X-ray2CT framework. The end-to-end workflow connects differentiable DRR rendering (DiffDRR), synthetic-to-real domain adaptation (CycleGAN), and conditional 3D diffusion reconstruction (X-ray2CTPA) to generate interactive 3D CT volumes from a single 2D radiograph.
           </figcaption>
@@ -123,7 +123,7 @@
 
         <!-- Figure 2: Detailed Model Architecture -->
         <figure class="paper-figure">
-          <img src="../assets/model.png" alt="3D Latent Denoising Diffusion Network Architecture" />
+          <img src="assets/model.png" alt="3D Latent Denoising Diffusion Network Architecture" />
           <figcaption class="paper-caption">
             <strong>Figure 2:</strong> Architecture of the conditional 3D diffusion reconstruction network (X-ray2CTPA), incorporating a 3D Variational Autoencoder (VAE) and a cross-attention conditional denoising U-Net guided by 2D radiograph priors.
           </figcaption>
@@ -170,7 +170,7 @@
                 <span class="status-indicator input-dot"></span>
               </div>
               <div class="media-box xray-box">
-                <img id="xrayImageCtpa" src="../assets/4015007782447_xray.png" alt="2D Chest X-Ray Input - CTPA" />
+                <img id="xrayImageCtpa" src="assets/4015007782447_xray.png" alt="2D Chest X-Ray Input - CTPA" />
               </div>
               <span class="col-caption">Single projection radiograph</span>
             </div>
@@ -182,7 +182,7 @@
                 <span class="status-indicator active-dot">GENERATED</span>
               </div>
               <div class="media-box ct-box">
-                <img id="ctImageCtpa" src="../assets/4015007782447.gif" alt="Synthesized 3D CT Volume - CTPA" />
+                <img id="ctImageCtpa" src="assets/4015007782447.gif" alt="Synthesized 3D CT Volume - CTPA" />
               </div>
               <span class="col-caption">Model synthesized volume</span>
             </div>
@@ -194,7 +194,7 @@
                 <span class="status-indicator ref-dot">REFERENCE</span>
               </div>
               <div class="media-box ct-box ref-box">
-                <img id="referenceImageCtpa" src="../assets/4015007782447_0.gif" alt="Ground Truth CT Reference - CTPA" />
+                <img id="referenceImageCtpa" src="assets/4015007782447_0.gif" alt="Ground Truth CT Reference - CTPA" />
               </div>
               <span class="col-caption">Target clinical acquisition</span>
             </div>
@@ -232,7 +232,7 @@
                 <span class="status-indicator input-dot"></span>
               </div>
               <div class="media-box xray-box">
-                <img id="xrayImageLidc" src="../assets/x-ray input.jpg" alt="2D Chest X-Ray Input - LIDC" />
+                <img id="xrayImageLidc" src="assets/x-ray input.jpg" alt="2D Chest X-Ray Input - LIDC" />
               </div>
               <span class="col-caption">Single projection radiograph</span>
             </div>
@@ -244,7 +244,7 @@
                 <span class="status-indicator active-dot">GENERATED</span>
               </div>
               <div class="media-box ct-box">
-                <img id="ctImageLidc" src="../assets/LIDC-IDRI-0046.gif" alt="Synthesized 3D CT Volume - LIDC" />
+                <img id="ctImageLidc" src="assets/LIDC-IDRI-0046.gif" alt="Synthesized 3D CT Volume - LIDC" />
               </div>
               <span class="col-caption">Model synthesized volume</span>
             </div>
@@ -256,7 +256,7 @@
                 <span class="status-indicator ref-dot">REFERENCE</span>
               </div>
               <div class="media-box ct-box ref-box">
-                <img id="referenceImageLidc" src="../assets/LIDC-IDRI-0046_0.gif" alt="Ground Truth CT Reference - LIDC" />
+                <img id="referenceImageLidc" src="assets/LIDC-IDRI-0046_0.gif" alt="Ground Truth CT Reference - LIDC" />
               </div>
               <span class="col-caption">Target clinical acquisition</span>
             </div>
@@ -265,7 +265,7 @@
 
         <!-- Figure 3: Web Interface Viewer Preview -->
         <figure class="paper-figure">
-          <img src="../assets/web_interface.png" alt="Clinical web application interface for interactive 3D slice exploration" />
+          <img src="assets/web_interface.png" alt="Clinical web application interface for interactive 3D slice exploration" />
           <figcaption class="paper-caption">
             <strong>Figure 3:</strong> Browser-based medical imaging viewer supporting multi-planar reformatting (axial, coronal, sagittal), continuous volume rotation, and slice index navigation.
           </figcaption>
@@ -283,7 +283,7 @@
 
         <!-- Figure 4: Qualitative Comparison -->
         <figure class="paper-figure">
-          <img src="../assets/last_compare.png" alt="Qualitative visual comparison between generated 3D CT and ground truth" />
+          <img src="assets/last_compare.png" alt="Qualitative visual comparison between generated 3D CT and ground truth" />
           <figcaption class="paper-caption">
             <strong>Figure 4:</strong> Qualitative visual comparison between reconstructed 3D volumes and target ground truth clinical CT scans across multiple orthogonal views.
           </figcaption>
@@ -291,7 +291,7 @@
 
         <!-- Table 1: Benchmark Metrics -->
         <figure class="paper-figure table-figure">
-          <img src="../assets/Metric_dat.png" alt="Quantitative evaluation metrics table" class="paper-table-img" />
+          <img src="assets/Metric_dat.png" alt="Quantitative evaluation metrics table" class="paper-table-img" />
           <figcaption class="paper-caption">
             <strong>Table 1:</strong> Quantitative evaluation on held-out test sets across CTPA and LIDC-IDRI datasets measuring Structural Similarity (SSIM) and Peak Signal-to-Noise Ratio (PSNR).
           </figcaption>
