@@ -4,5 +4,18 @@ data/
 # Python cache
 __pycache__/
 *.py[cod]
-*$py.class
+# Paper PDF
+*.pdf
+paper/*.pdf
+ICTA_2025_295.pdf
+
+# Checkpoints & Pretrained Weights
+checkpoints/
+pretrained_models/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
 

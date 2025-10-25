@@ -1,7 +1,8 @@
 # AI-Medical: A Deep Learning-based Web Application for CT Reconstruction from X-ray Images
 
-[![Conference](https://img.shields.io/badge/Conference-ICTA%202025-blue.svg)](paper/ICTA_2025_295.pdf)
-[![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](paper/ICTA_2025_295.pdf)
+[![Conference](https://img.shields.io/badge/Conference-ICTA%202025-blue.svg)](https://gwdu.ptit.edu.vn/storage/file/692e56009bcc859dd51c3988/ICTA_2025_295.pdf)
+[![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](https://gwdu.ptit.edu.vn/storage/file/692e56009bcc859dd51c3988/ICTA_2025_295.pdf)
+[![Project Page](https://img.shields.io/badge/Project%20Page-Live%20Demo-brightgreen.svg)](https://quocbao2772004.github.io/AI_Medical/)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-green.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -119,11 +120,10 @@ AI_Medical/
 ├── web/                          # Full-stack clinical web application
 │   ├── DoAnPtit_Backend/         # FastAPI / Python backend service & database
 │   └── DoAnPtit_FrontEnd/        # React / Vite web frontend interface
-├── paper/                        # Academic paper project page & conference PDF
+├── paper/                        # Academic paper project page (web demo)
 │   ├── index.html                # Project webpage (SwiftAudio / A* paper style)
 │   ├── styles.css                # Minimalist scientific stylesheet
-│   ├── script.js                 # Interactive demonstration logic & BibTeX copy
-│   └── ICTA_2025_295.pdf         # Published conference paper PDF
+│   └── script.js                 # Interactive demonstration logic & BibTeX copy
 ├── assets/                       # Figures, animated volume GIFs, and benchmark tables
 ├── requirements.txt              # Core Python dependencies
 └── README.md                     # Project documentation
