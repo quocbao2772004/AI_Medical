@@ -1,8 +1,9 @@
-# AI-Medical: A Deep Learning-based Web Application for CT Reconstruction from X-ray Images
+# XAdaptCT: A Deep Learning-based Web Application for CT Reconstruction from X-ray Images
 
 [![Conference](https://img.shields.io/badge/Conference-ICTA%202025-blue.svg)](https://gwdu.ptit.edu.vn/storage/file/692e56009bcc859dd51c3988/ICTA_2025_295.pdf)
 [![Paper PDF](https://img.shields.io/badge/Paper-PDF-red.svg)](https://gwdu.ptit.edu.vn/storage/file/692e56009bcc859dd51c3988/ICTA_2025_295.pdf)
-[![Project Page](https://img.shields.io/badge/Project%20Page-Live%20Demo-brightgreen.svg)](https://quocbao2772004.github.io/AI_Medical/)
+[![Project Page](https://img.shields.io/badge/Project%20Page-Live%20Demo-brightgreen.svg)](https://quocbao2772004.github.io/XAdaptCT/)
+[![Model Checkpoints](https://img.shields.io/badge/Model%20Checkpoints-Google%20Drive-orange.svg)](https://drive.google.com/drive/folders/1WDGgtGz19ZAZEb9CJwuVKyI7n6SmhDOi?usp=sharing)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-green.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg)](https://pytorch.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -106,7 +107,7 @@ Our web interface allows medical professionals to interactively inspect synthesi
 ## 📂 Repository Structure
 
 ```text
-AI_Medical/
+XAdaptCT/
 ├── DiffDRR/                      # GPU-accelerated differentiable ray-tracing module
 ├── pytorch-CycleGAN-and-pix2pix/ # Domain adaptation (Synthetic DRR -> Clinical X-Ray)
 ├── Xray2CTPA/                    # 3D conditional latent diffusion model & training
@@ -131,6 +132,22 @@ AI_Medical/
 
 ---
 
+## 📦 Pretrained Model Checkpoints
+
+Pretrained model weights for **CycleGAN** (synthetic-to-real domain adaptation) and **X-ray2CTPA** (3D conditional latent diffusion model) are available on Google Drive:
+
+🔗 **[Google Drive Checkpoint Folder (Private)](https://drive.google.com/drive/folders/1WDGgtGz19ZAZEb9CJwuVKyI7n6SmhDOi?usp=sharing)**
+
+| Model Component | Checkpoint File | Description | Target Path in Repository |
+| :--- | :--- | :--- | :--- |
+| **X-ray2CTPA Diffusion** | `model-81.pt` | 3D Conditional Latent Diffusion Model checkpoint (milestone 81) | `Xray2CTPA/checkpoints/model-81.pt`<br>`web/DoAnPtit_Backend/DoAnPtit_Xray2CT/checkpoints/model-81.pt` |
+| **CycleGAN Generator** | `latest_net_G.pth` | Synthetic DRR to real X-ray generator network | `pytorch-CycleGAN-and-pix2pix/checkpoints/xray_cyclegan/latest_net_G.pth`<br>`web/DoAnPtit_Backend/DoAnPtit_CycleGan/checkpoints/xray_cyclegan/latest_net_G.pth` |
+
+> [!NOTE]
+> Access to the Google Drive checkpoint folder is private. If you need access to evaluate or test the model checkpoints, please request access or contact the repository owner.
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Prerequisites & Environment Setup
@@ -138,12 +155,12 @@ AI_Medical/
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/quocbao2772004/AI_Medical.git
-cd AI_Medical
+git clone https://github.com/quocbao2772004/XAdaptCT.git
+cd XAdaptCT
 
 # Create and activate a conda environment
-conda create -n ai_medical python=3.9 -y
-conda activate ai_medical
+conda create -n xadaptct python=3.9 -y
+conda activate xadaptct
 
 # Install dependencies
 pip install -r requirements.txt
@@ -193,7 +210,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 Run a lightweight local HTTP server:
 
 ```bash
-cd AI_Medical
+cd XAdaptCT
 python3 -m http.server 8080
 ```
 Navigate to [http://localhost:8080/paper/](http://localhost:8080/paper/) to view the academic project page.
