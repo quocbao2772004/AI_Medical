@@ -1,0 +1,10 @@
+SimpleITK
+diffusers
+lungmask
+monai==1.4.0
+monai-generative==0.2.3
+torch==2.6.0+cu118
+torchaudio==2.6.0+cu118
+torchio==0.20.5
+torchmetrics==1.6.3
+torchvision==0.21.0+cu118
