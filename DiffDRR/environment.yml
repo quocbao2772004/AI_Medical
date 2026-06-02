@@ -1,0 +1,22 @@
+name: diffdrr
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - pip
+  - pytorch>=2.2
+  - einops
+  - torchvision
+  - torchio
+  - kornia
+  - timm
+  - numpy
+  - matplotlib
+  - seaborn
+  - imageio
+  - fastcore
+  - scipy
+  - tqdm
+  - pyvista>=0.45.0
+  - vtk>9.4.0
